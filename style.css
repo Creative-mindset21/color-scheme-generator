@@ -1,0 +1,102 @@
+/* ?GOOGLE FONTS LINKING */
+@import url("https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+/* ?CUSTOM CSS */
+:root {
+  --color-white: #fff;
+  --color-dark: #1f2937;
+  --color-bgcolor: #f8f9fa;
+
+  --padding: 0.5rem 1rem;
+}
+
+/* ?DEFAULT CSS */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  font-family: "Mrs Saint Delafield", cursive;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)),
+    url(./images/bg-image.jpg) no-repeat center/cover;
+  color: var(--color-white);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+header h2 {
+  font-size: 2.3rem;
+  font-weight: 300;
+}
+
+main {
+  background: var(--color-bgcolor);
+  border-radius: 5px;
+  width: 600px;
+}
+
+.main-header {
+  display: flex;
+  padding: var(--padding);
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid blue;
+}
+
+.main-header input[type="color"] {
+  padding: 0 0.2rem;
+}
+
+.color-scheme {
+  padding: 0.3rem 0.2rem;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.color-scheme-btn {
+  padding: var(--padding);
+  cursor: pointer;
+}
+
+.main-header i {
+  color: var(--color-dark);
+  font-size: 1.2rem;
+}
+
+.main-color {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  height: 30rem;
+}
+
+.box {
+  background-color: red;
+  height: 100%;
+}
+
+.box:nth-child(2) {
+  background-color: blue;
+}
+
+.box:nth-child(3) {
+  background-color: yellow;
+}
+.box:nth-child(2) {
+  background-color: blue;
+}
+.box:nth-child(2) {
+  background-color: blue;
+}
