@@ -86,17 +86,3 @@ main {
   background-color: red;
   height: 100%;
 }
-
-.box:nth-child(2) {
-  background-color: blue;
-}
-
-.box:nth-child(3) {
-  background-color: yellow;
-}
-.box:nth-child(2) {
-  background-color: blue;
-}
-.box:nth-child(2) {
-  background-color: blue;
-}
