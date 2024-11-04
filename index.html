@@ -15,10 +15,52 @@
     <!-- !FAVICON LINKING -->
     <link rel="icon" href="./images/logo.png" />
 
+    <!-- !BOXICONS LINKING -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
     <!-- !TITLE -->
     <title>Color Scheme Generator</title>
   </head>
   <body>
+    <div class="container">
+      <header>
+        <h2>Color Scheme Generator</h2>
+      </header>
+
+      <main>
+        <section class="main-header">
+          <input type="color" id="color-picker" />
+
+          <select id="color-scheme" class="color-scheme">
+            <option value="monochrome">Monochrome</option>
+            <option value="monochrome-light">Monochrome-light</option>
+            <option value="monochrome-dark">Monochrome-dark</option>
+            <option value="analogic">Analogic</option>
+            <option value="complement">Complement</option>
+            <option value="analogic-complement">Analogic-complement</option>
+            <option value="triad">Triad</option>
+            <option value="quad">Quad</option>
+          </select>
+
+          <button class="color-scheme-btn" id="color-scheme-btn">
+            Get Color Scheme
+          </button>
+
+          <i class="bx bx-moon"></i>
+        </section>
+
+        <section class="main-color">
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+        </section>
+      </main>
+    </div>
     <!-- !CUSTOM JS LINKING -->
     <script src="script.js"></script>
   </body>
