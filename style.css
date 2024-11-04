@@ -5,7 +5,7 @@
 :root {
   --color-white: #fff;
   --color-dark: #1f2937;
-  --color-bgcolor: #f8f9fa;
+  --color-bgcolor: #e4e6e7;
 
   --padding: 0.5rem 1rem;
 }
@@ -53,7 +53,6 @@ main {
   padding: var(--padding);
   align-items: center;
   justify-content: space-between;
-  border-bottom: 2px solid blue;
 }
 
 .main-header input[type="color"] {
@@ -76,13 +75,27 @@ main {
   font-size: 1.2rem;
 }
 
-.main-color {
+.main-color,
+.color-code {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
+}
+
+.main-color {
   height: 30rem;
 }
 
 .box {
-  background-color: red;
+  background-color: var(--color-white);
   height: 100%;
+}
+
+.color-code {
+  justify-items: center;
+  margin: 0.5rem 0;
+}
+
+.color-code p {
+  color: var(--color-dark);
+  font-family: "Roboto", sans-serif;
 }

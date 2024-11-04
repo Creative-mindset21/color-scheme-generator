@@ -6,10 +6,10 @@ function generateColor() {
   const boxes = document.querySelectorAll(".box");
   const colorSchemeValue = colorScheme.value;
   const color = colorPicker.replace("#", "");
+  const colorCode = document.querySelectorAll(".code");
   const count = 5;
 
   let i = 0;
-  console.log(colorSchemeValue);
 
   fetch(
     `https://www.thecolorapi.com/scheme?hex=${color}&mode=${colorSchemeValue}&count=${count}`
@@ -19,9 +19,8 @@ function generateColor() {
       console.log(data.colors[0].hex.value);
       for (box of boxes) {
         box.style.background = data.colors[i].hex.value;
+        colorCode[i].textContent = data.colors[i].hex.value;
         i++;
       }
     });
 }
-
-generateColor();
