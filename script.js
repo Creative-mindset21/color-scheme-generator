@@ -2,6 +2,7 @@
 const colorPicker = document.getElementById("color-picker");
 const colorScheme = document.getElementById("color-scheme");
 const colorBtn = document.getElementById("color-scheme-btn");
+const themeBtn = document.querySelector(".main-header i");
 
 //! FUNCTION TO GENERATE COLOR SCHEME
 function generateColor() {
@@ -33,6 +34,11 @@ function generateColor() {
     });
 }
 
+colorBtn.addEventListener("click", () => {
+  generateColor();
+});
+
+// !MAKE THE COLOR COPYABLE
 function copyToClipboard(color) {
   navigator.clipboard
     .writeText(color)
@@ -44,4 +50,26 @@ function copyToClipboard(color) {
     });
 }
 
-generateColor();
+// !THEME BUTTON
+function changeTheme() {
+  const bodyEl = document.querySelector("body");
+
+  // ?CHECK IF CURRENT THEME IS DARK
+  const currentTheme = localStorage.getItem("theme");
+  if (currentTheme === "dark") {
+    bodyEl.classList.add("dark");
+  }
+
+  themeBtn.addEventListener("click", () => {
+    bodyEl.classList.toggle("dark");
+
+    // ?STORE THE THEME TO LOCAL STORAGE
+    if (bodyEl.classList.contains("dark")) {
+      localStorage.setItem("theme", "dark");
+    } else {
+      localStorage.setItem("theme", "light");
+    }
+  });
+}
+
+changeTheme();
